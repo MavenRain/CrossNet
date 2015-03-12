@@ -1,0 +1,31 @@
+<TopItem>
+  <!-- Standard .NET dependencies
+        Also add any dependencies taht your assemblies need,
+        even if the depedency is going to be parsed by CrossNet -->
+  <dependency>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\MScorLib.dll</dependency>
+  <dependency>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Configuration.dll</dependency>
+  <dependency>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll</dependency>
+  <dependency>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Data.SqlXml.dll</dependency>
+  <dependency>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Security.dll</dependency>
+  <dependency>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Runtime.Remoting.dll</dependency>
+  <dependency>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Runtime.Serialization.Formatters.Soap.dll</dependency>
+
+  <!-- Exports in C++ (default) -->
+  <Language>C++</Language>
+
+  <!-- Output folder - Must be present before the assemblies to parse -->
+  <OutputFolder>YourOutputPath</OutputFolder>
+
+  <!-- Assemblies that are going to be parsed -->
+  <AssemblyToParse>FirstPath\FirstAssembly.dll</AssemblyToParse>
+  <AssemblyToParse>SecondPath\SecondAssembly.dll</AssemblyToParse>
+
+  <!-- True if we want to exclude all the predefined types in CrossNetRuntime (default).
+        False if we want those types to be parsed -->
+  <ExcludeDefaultTypes>True</ExcludeDefaultTypes>
+
+  <!-- Add a redundant type just to check if we can have several time the same type added
+        System.Object is already excluded as default type. So it will be listed three times total in this case. -->
+  <ExcludeType>System.Object</ExcludeType>
+  <ExcludeType>System.Object</ExcludeType>
+</TopItem>

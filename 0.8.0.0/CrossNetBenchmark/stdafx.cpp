@@ -1,0 +1,5 @@
+/*
+    CrossNetBenchmark
+*/
+
+#include "stdafx.h"
